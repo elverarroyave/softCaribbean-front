@@ -1,0 +1,26 @@
+<div class="container mt-4 mb-4">
+  <h2 class="title">Buscar Cliente</h2>
+
+  <div class="col-md-12 mt-2 mb-2">
+    <form action="" [formGroup]="formGroupClient">
+      <label class="text" for="">Documento:</label>
+      <input
+        type="text"
+        class="form-control"
+        placeholder="Ingresa el número de documento..."
+        formControlName="document"
+        (keyup.enter)="searhClient()"
+      />
+    </form>
+  </div>
+
+  <div style="display: flex; justify-content: center">
+    <button
+      (click)="searhClient()"
+      class="btn btn-success"
+      [disabled]="formGroupClient.invalid"
+    >
+      Buscar Cliente
+    </button>
+  </div>
+</div>
